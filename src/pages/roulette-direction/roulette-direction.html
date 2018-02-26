@@ -1,0 +1,48 @@
+<!--
+  Generated template for the RouletteDirection page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!showIndicator">
+    <div *ngFor="let button of buttons">
+      <div *ngIf="button.show" class="playerStyle">{{button.name}}</div>
+    </div>
+  
+    <div class="container">  
+      <canvas #canvas2 id="canvas2" height="410"></canvas>
+      <input (click)="spin()" type="button" value="Jugar" style="float:left;" id='spin' />
+    </div>
+  </div>
+  <div *ngIf="showIndicator">
+    <div class="indicators" >
+      <h2>Casillas por correr</h2>
+      <div id="number">{{number}}</div>
+      <h2>Dirección</h2>
+      <div id="direction">
+        <img src="assets/imgs/{{direction}}.png"/>
+      </div>
+    </div>
+
+    <div id="lastBtns">
+      <div class="nextTurn">
+        <button (click)="nextPlayer()"><img src="./assets/icon/arrow.png" width="30%"></button>
+      </div>
+      <div class="fin">
+        <button (click)="fin()">FIN</button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<div style="display:none;">
+  <img id="img0" src="assets/imgs/1.png" width="10px" height="10px" alt="1">
+  <img id="img1" src="assets/imgs/2.png" width="10px" height="10px" alt="2">
+  <img id="img2" src="assets/imgs/3.png" width="10px" height="10px" alt="3">
+  <img id="img3" src="assets/imgs/4.png" width="10px" height="10px" alt="4">
+</div>
