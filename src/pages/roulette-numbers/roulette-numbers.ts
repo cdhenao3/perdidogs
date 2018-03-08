@@ -79,8 +79,8 @@ export class RouletteNumbers {
     this.canvas = <HTMLCanvasElement>document.getElementById('canvas');
     this.canvas.width = (window.screen.width - 32);
     if (this.canvas.getContext) {
-      let outsideRadius = 180;
-      let textRadius = 120;
+      let outsideRadius = (window.screen.width/2.2);
+      let textRadius = (window.screen.width/3.5);
       let insideRadius = 30;
       
       this.ctx = this.canvas.getContext("2d");
@@ -96,8 +96,8 @@ export class RouletteNumbers {
         //this.ctx.fillStyle = colors[i];
         this.ctx.fillStyle = this.getColor(i, this.options.length);
         this.ctx.beginPath();
-        this.ctx.arc(190, 200, outsideRadius, angle, angle + this.arc, false);
-        this.ctx.arc(190, 200, insideRadius, angle + this.arc, angle, true);
+        this.ctx.arc(((window.screen.width/2)-16), 200, outsideRadius, angle, angle + this.arc, false);
+        this.ctx.arc(((window.screen.width/2)-16), 200, insideRadius, angle + this.arc, angle, true);
         //this.ctx.stroke();
         this.ctx.fill();
   
@@ -107,7 +107,7 @@ export class RouletteNumbers {
         this.ctx.shadowBlur    = 0;
         //this.ctx.shadowColor   = "rgb(220,220,220)";
         this.ctx.fillStyle = "#474747";
-        this.ctx.translate(190 + Math.cos(angle + this.arc / 2) * textRadius, 
+        this.ctx.translate((window.screen.width/2.2) + Math.cos(angle + this.arc / 2) * textRadius, 
                       200 + Math.sin(angle + this.arc / 2) * textRadius);
         //this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
         var text = this.options[i];
@@ -118,10 +118,10 @@ export class RouletteNumbers {
       //Arrow
       this.ctx.fillStyle = "black";
       this.ctx.beginPath();
-      this.ctx.moveTo(190 - 11, 200 - (outsideRadius + 12));
-      this.ctx.lineTo(190 + 11, 200 - (outsideRadius + 12));
-      this.ctx.lineTo(190 + 0, 200 - (outsideRadius - 15));
-      this.ctx.lineTo(190 - 11, 200 - (outsideRadius + 12));
+      this.ctx.moveTo(((window.screen.width / 2) - 11-16), 200 - (outsideRadius + 12));
+      this.ctx.lineTo(((window.screen.width / 2) + 11-16), 200 - (outsideRadius + 12));
+      this.ctx.lineTo(((window.screen.width / 2) + 0-16), 200 - (outsideRadius - 15));
+      this.ctx.lineTo(((window.screen.width / 2) - 11-16), 200 - (outsideRadius + 12));
       this.ctx.fill();
     }
   }
