@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    tools:context=".Scanner">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_titulo"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/fondo4"
+
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_escanea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="90dp"
+                android:text="Escanea la habilidad"
+                android:textColor="#3B462A"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ladrido"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ladrido"
+                android:layout_toEndOf="@id/txt_escanea"
+                android:layout_toRightOf="@id/ladrido"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/salto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/salto"
+                android:layout_toEndOf="@id/ladrido"
+                android:layout_toRightOf="@id/excavacion"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/excavacion"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/excavacion"
+                android:layout_toEndOf="@id/salto"
+                android:layout_toRightOf="@id/salto"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <SurfaceView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        />
+
+</RelativeLayout>

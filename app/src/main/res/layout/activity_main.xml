@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@drawable/fondo1"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/jugadores"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:id="@+id/imagenes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/select_jugadores"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_span="5"
+                    android:text="Elije los jugadores"
+                    android:textColor="#000000"
+                    android:textSize="45dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/jugador1"
+                    android:layout_width="105dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/perro1" />
+
+                <ImageButton
+                    android:id="@+id/jugador2"
+                    android:layout_width="105dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/perro2" />
+
+                <ImageButton
+                    android:id="@+id/jugador3"
+                    android:layout_width="105dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/perro3" />
+
+                <ImageButton
+                    android:id="@+id/jugador4"
+                    android:layout_width="105dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/perro4" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/btnConfirmacion"
+                    android:scaleX="0.5"
+                    android:layout_gravity="center"
+                    android:layout_span="5"
+                    android:background="@drawable/chulo" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
